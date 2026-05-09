@@ -1,0 +1,16 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+ENV NUXT_PUBLIC_STRAPI_URL=http://localhost:1337
+
+EXPOSE 3000
+
+CMD ["node", ".output/server/index.mjs"]
