@@ -1,4 +1,5 @@
-<template>
+<!-- Lizalise: u23587874 -->
+ <template>
   <div>
     <nav>
       <span class="brand">Blog</span>
